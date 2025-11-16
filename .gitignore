@@ -74,6 +74,21 @@ Desktop.ini
 .env.*.local
 *.env
 
+# Security & Credentials (NEVER COMMIT)
+config/config.yaml
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.*
+secrets.*
+*_secret*
+*_token*
+*_apikey*
+api_keys.*
+shodan_key.*
+*.credentials
+
 # Temporary
 *.tmp
 *.bak

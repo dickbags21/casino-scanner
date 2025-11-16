@@ -295,11 +295,34 @@ class YourPlugin(BasePlugin):
 
 ⚠️ **Important**: This tool is for authorized security research only.
 
+### Application Security
+
 - No authentication implemented (single-user system)
 - No rate limiting on API endpoints
 - Ensure proper file permissions on database file
 - Use in secure network environment
 - Change Node-RED credential secret in production
+
+### Repository Privacy
+
+🔐 **It is highly recommended to keep this repository private** to protect:
+- Your security research methodology
+- API keys and configuration files
+- Scan results and vulnerability data
+- Target information
+
+**To make this repository private:**
+1. See [MAKE_PRIVATE.md](MAKE_PRIVATE.md) for detailed instructions
+2. Run `./make_repository_private.sh` (requires GitHub CLI)
+3. Or use GitHub web interface: Settings → Danger Zone → Change visibility
+
+### Protecting Sensitive Data
+
+- Never commit API keys or secrets to the repository
+- Use `.env` files and keep them in `.gitignore`
+- Rotate any API keys that may have been exposed
+- Use GitHub Secrets for CI/CD workflows
+- Enable Dependabot and security scanning
 
 ## 🐛 Troubleshooting
 
