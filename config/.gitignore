@@ -1,0 +1,12 @@
+# API Keys and Sensitive Data
+config.yaml
+*.key
+*.pem
+*.env
+
+# Results and Logs
+../results/*
+../logs/*
+!../results/.gitkeep
+!../logs/.gitkeep
+

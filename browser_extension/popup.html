@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Scanner 4.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎰 Code Roten 4.0</h1>
+            <p>Casino Vulnerability Scanner</p>
+        </header>
+
+        <div class="current-site">
+            <h3>Current Site:</h3>
+            <div id="current-url" class="url-display">-</div>
+        </div>
+
+        <div class="scan-controls">
+            <button id="quick-scan" class="btn btn-primary">🚀 Quick Scan</button>
+            <button id="deep-scan" class="btn btn-secondary">🔍 Deep Scan</button>
+            <button id="bonus-hunter" class="btn btn-success">💰 Bonus Hunter</button>
+        </div>
+
+        <div class="scan-results">
+            <h3>Scan Results:</h3>
+            <div id="results-container" class="results">
+                <div class="loading" id="loading-indicator" style="display: none;">
+                    🔄 Scanning... Please wait...
+                </div>
+                <div id="results-content"></div>
+            </div>
+        </div>
+
+        <div class="vulnerabilities">
+            <h3>🚨 Vulnerabilities Found:</h3>
+            <div id="vulns-list" class="vulns">
+                <div class="no-vulns">No vulnerabilities detected</div>
+            </div>
+        </div>
+
+        <div class="loopholes">
+            <h3>💡 Loopholes & Opportunities:</h3>
+            <div id="loopholes-list" class="loopholes-content">
+                <div class="no-loopholes">No loopholes found</div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="export-report" class="btn btn-outline">📊 Export Report</button>
+            <button id="clear-results" class="btn btn-outline">🗑️ Clear</button>
+        </div>
+
+        <footer>
+            <p>⚠️ Use responsibly. Only scan authorized targets.</p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

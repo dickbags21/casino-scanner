@@ -1,0 +1,100 @@
+{
+	"name": "Casino Scanner Pro - Development Container",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+	
+	// Features to add to the dev container
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [8080, 1337, 8081],
+	"portsAttributes": {
+		"8080": {
+			"label": "OWASP ZAP",
+			"onAutoForward": "notify"
+		},
+		"1337": {
+			"label": "Burp Suite API",
+			"onAutoForward": "notify"
+		},
+		"8081": {
+			"label": "Custom Service",
+			"onAutoForward": "ignore"
+		}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "bash .devcontainer/post-create.sh",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.black-formatter",
+				"ms-python.isort",
+				"redhat.vscode-yaml",
+				"ms-vscode.vscode-json",
+				"eamodio.gitlens",
+				"ms-vscode.makefile-tools"
+			],
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": false,
+				"python.linting.flake8Enabled": true,
+				"python.formatting.provider": "black",
+				"python.formatting.blackArgs": ["--line-length", "120"],
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.organizeImports": true
+				},
+				"files.exclude": {
+					"**/__pycache__": true,
+					"**/*.pyc": true
+				},
+				"python.analysis.typeCheckingMode": "basic"
+			}
+		}
+	},
+
+	// Mount the project folder
+	"workspaceFolder": "/workspace",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+
+	// Mount additional volumes for persistence
+	"mounts": [
+		"source=casino-scanner-results,target=/workspace/results,type=volume",
+		"source=casino-scanner-logs,target=/workspace/logs,type=volume",
+		"source=casino-scanner-config,target=/workspace/config,type=volume"
+	],
+
+	// Set environment variables
+	"containerEnv": {
+		"PYTHONUNBUFFERED": "1",
+		"DISPLAY": ":99",
+		"PYTHONPATH": "/workspace:/workspace/tools"
+	},
+
+	// Use 'runArgs' to pass additional arguments to the Docker run command
+	"runArgs": [
+		"--shm-size=2gb",
+		"--network=host"
+	],
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "root",
+
+	// Override default command
+	"overrideCommand": false
+}
+
+
+
+

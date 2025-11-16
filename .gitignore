@@ -1,0 +1,181 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Database
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+dashboard/casino_scanner.db
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Results and Output
+results/
+screenshots/
+*.json.bak
+*.png
+*.jpg
+*.jpeg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Environment
+.env
+.env.local
+.env.*.local
+*.env
+
+# Temporary
+*.tmp
+*.bak
+*.backup
+*.cache
+.cache/
+
+# Node.js / Node-RED
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.node-red/
+# Track Node-RED config files but ignore runtime data
+node-red/*.log
+node-red/lib/
+node-red/.config.json
+
+# Separate Projects (exclude from main repo)
+jailbreak-mcp/
+jailbreak-mcp/**/*
+
+# Distribution / Packaging
+dist/
+build/
+*.tar.gz
+*.zip
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Coverage reports
+coverage/
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff (if used later)
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff (if used later)
+instance/
+.webassets-cache
+
+# Scrapy stuff (if used later)
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Archive folder (keep structure but ignore contents)
+archive/**/*
+!archive/README.md

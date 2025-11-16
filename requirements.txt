@@ -1,0 +1,43 @@
+# Casino Security Research Framework Dependencies
+
+# Core dependencies
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Shodan API - Official Python client library
+shodan>=1.31.0
+
+# Browser automation
+playwright>=1.40.0
+
+# Data handling
+dataclasses>=0.8; python_version<"3.7"
+
+# Logging and utilities
+colorlog>=6.8.0
+
+# Mobile app analysis
+requests>=2.31.0
+androguard>=3.4.0a1
+frida-tools>=12.2.0
+mitmproxy>=10.1.0
+
+# Additional utilities
+# pathlib is built into Python 3.4+ - no need to install
+asyncio-mqtt>=0.16.1
+
+# Note: Some tools require system packages:
+# - apktool: Install via apt/yum/brew
+# - jadx: Download from GitHub releases
+# - scrcpy: Install via package manager
+schedule>=1.2.0
+
+# Dashboard Framework Dependencies
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+sqlalchemy>=2.0.0
+websockets>=12.0
+jinja2>=3.1.0
+python-multipart>=0.0.6
+httpx>=0.25.0  # For webhook triggers and Node-RED integration
+

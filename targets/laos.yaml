@@ -1,0 +1,13 @@
+region: laos
+targets:
+  - url: "https://example-casino.la"
+    name: "Example Casino Laos"
+    region: "laos"
+    description: "Sample target for Laos region"
+    tags:
+      - "casino"
+      - "gambling"
+    priority: 5
+    status: "pending"
+    notes: ""
+
