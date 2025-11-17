@@ -15,6 +15,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 import logging
+import os
 import httpx
 
 from dashboard.database import get_db, Scan, ScanResult, Vulnerability, Target, Plugin as DBPlugin
@@ -89,14 +90,27 @@ async def trigger_webhook_async(endpoint: str, data: Dict):
     """
     Trigger a webhook endpoint asynchronously
     Used for Node-RED automation triggers
+    
+    Sends webhooks to Node-RED (port 1880) which then processes them
     """
     try:
-        # Get base URL from environment or use default
-        base_url = "http://localhost:8000"
-        url = f"{base_url}{endpoint}"
+        # Get Node-RED URL from environment or use default
+        node_red_url = os.getenv("NODE_RED_URL", "http://localhost:1880")
+        
+        # Map FastAPI webhook endpoints to Node-RED webhook endpoints
+        endpoint_map = {
+            "/api/webhooks/vulnerability-found": "/webhook/vulnerability-found",
+            "/api/webhooks/scan-completed": "/webhook/scan-completed",
+            "/api/webhooks/target-discovered": "/webhook/target-discovered"
+        }
+        
+        # Convert FastAPI endpoint to Node-RED endpoint
+        node_red_endpoint = endpoint_map.get(endpoint, endpoint)
+        url = f"{node_red_url}{node_red_endpoint}"
         
         async with httpx.AsyncClient(timeout=5.0) as client:
             await client.post(url, json=data)
+            logger.debug(f"Webhook sent to Node-RED: {url}")
     except Exception as e:
         logger.debug(f"Webhook trigger failed (this is OK if Node-RED not running): {e}")
 

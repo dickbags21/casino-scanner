@@ -113,7 +113,7 @@
         "type": "file",
         "z": "vulnerability-alert-flow",
         "name": "Save Alert",
-        "filename": "/home/d/casino/logs/vulnerability_alerts.log",
+        "filename": "/tmp/node-red-vulnerability_alerts.log",
         "appendNewline": true,
         "createDir": true,
         "overwriteFile": "false",

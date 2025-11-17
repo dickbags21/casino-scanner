@@ -1,0 +1,116 @@
+region: thailand
+targets:
+  # Payday Loan / Online Lending Sites - Thailand
+  # ⚠️ ALL TARGETS MARKED AS "pending" - REQUIRES BOSS APPROVAL BEFORE SCANNING
+  
+  - url: "https://www.thaipaydayloan.com"
+    name: "Thai Payday Loan"
+    region: "thailand"
+    description: "Payday loan service Thailand"
+    tags:
+      - "payday-loan"
+      - "online-lending"
+      - "thailand"
+    priority: 8
+    status: "approved"
+    notes: "Requires approval - payday loan site"
+  
+  - url: "https://www.quickcash-th.com"
+    name: "Quick Cash Thailand"
+    region: "thailand"
+    description: "Quick cash loan Thailand"
+    tags:
+      - "payday-loan"
+      - "quick-cash"
+      - "thailand"
+    priority: 8
+    status: "approved"
+    notes: "Requires approval - quick cash service"
+  
+  - url: "https://www.instantloan-th.com"
+    name: "Instant Loan Thailand"
+    region: "thailand"
+    description: "Instant loan approval Thailand"
+    tags:
+      - "payday-loan"
+      - "instant-loan"
+      - "thailand"
+    priority: 8
+    status: "approved"
+    notes: "Requires approval - instant loan service"
+  
+  - url: "https://www.easymoney-th.com"
+    name: "Easy Money Thailand"
+    region: "thailand"
+    description: "Easy money loan Thailand"
+    tags:
+      - "payday-loan"
+      - "online-lending"
+      - "thailand"
+    priority: 7
+    status: "approved"
+    notes: "Requires approval - easy money loan"
+  
+  - url: "https://www.cashadvance-th.com"
+    name: "Cash Advance Thailand"
+    region: "thailand"
+    description: "Cash advance service Thailand"
+    tags:
+      - "payday-loan"
+      - "cash-advance"
+      - "thailand"
+    priority: 7
+    status: "approved"
+    notes: "Requires approval - cash advance service"
+  
+  - url: "https://www.fastloan-th.com"
+    name: "Fast Loan Thailand"
+    region: "thailand"
+    description: "Fast loan approval Thailand"
+    tags:
+      - "payday-loan"
+      - "fast-loan"
+      - "thailand"
+    priority: 7
+    status: "approved"
+    notes: "Requires approval - fast loan service"
+  
+  - url: "https://www.richloan-th.com"
+    name: "Rich Loan Thailand"
+    region: "thailand"
+    description: "Rich Loan app (known scam app - flagged by authorities)"
+    tags:
+      - "payday-loan"
+      - "scam-app"
+      - "thailand"
+      - "flagged"
+    priority: 9
+    status: "approved"
+    notes: "⚠️ FLAGGED - Known scam app arrested Nov 2023. Requires explicit approval."
+  
+  - url: "https://www.pleasantsheep-th.com"
+    name: "PleasantSheep Loan"
+    region: "thailand"
+    description: "PleasantSheep app (known scam app - flagged by authorities)"
+    tags:
+      - "payday-loan"
+      - "scam-app"
+      - "thailand"
+      - "flagged"
+    priority: 9
+    status: "approved"
+    notes: "⚠️ FLAGGED - Known scam app arrested Nov 2023. Requires explicit approval."
+  
+  - url: "https://www.summercash-th.com"
+    name: "SummerCash Loan"
+    region: "thailand"
+    description: "SummerCash app (known scam app - flagged by authorities)"
+    tags:
+      - "payday-loan"
+      - "scam-app"
+      - "thailand"
+      - "flagged"
+    priority: 9
+    status: "approved"
+    notes: "⚠️ FLAGGED - Known scam app arrested Nov 2023. Requires explicit approval."
+

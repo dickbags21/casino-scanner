@@ -2,9 +2,13 @@
  * Node-RED Settings for Casino Scanner Automation
  * 
  * This file configures Node-RED to work with the Casino Scanner dashboard.
- * Place this in your Node-RED user directory (usually ~/.node-red/)
- * or configure Node-RED to use this settings file.
+ * Use with: node-red --settings /path/to/this/file.js
  */
+
+const path = require('path');
+
+// Get the directory where this settings file is located
+const settingsDir = __dirname;
 
 module.exports = {
     // Editor theme
@@ -25,11 +29,11 @@ module.exports = {
     httpAdminRoot: '/admin',
     httpStatic: '/home/d/casino/node-red/static',
 
-    // User directory
-    userDir: '/home/d/casino/node-red',
+    // User directory - use project directory
+    userDir: settingsDir,
 
-    // Flow file
-    flowFile: '/home/d/casino/node-red/flows.json',
+    // Flow file - use flows.json in the same directory as settings.js
+    flowFile: path.join(settingsDir, 'flows.json'),
 
     // Credential encryption
     credentialSecret: process.env.NODE_RED_CREDENTIAL_SECRET || 'casino-scanner-secret-change-in-production',

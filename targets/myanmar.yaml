@@ -1,0 +1,65 @@
+region: myanmar
+targets:
+  # Payday Loan / Online Lending Sites - Myanmar
+  # ⚠️ ALL TARGETS MARKED AS "pending" - REQUIRES BOSS APPROVAL BEFORE SCANNING
+  
+  - url: "https://www.myanmar-loan.com"
+    name: "Myanmar Loan Service"
+    region: "myanmar"
+    description: "Online payday loan service in Myanmar"
+    tags:
+      - "payday-loan"
+      - "online-lending"
+      - "myanmar"
+    priority: 7
+    status: "approved"
+    notes: "Requires approval - payday loan site"
+  
+  - url: "https://www.quickloan-mm.com"
+    name: "Quick Loan Myanmar"
+    region: "myanmar"
+    description: "Instant loan service Myanmar"
+    tags:
+      - "payday-loan"
+      - "instant-loan"
+      - "myanmar"
+    priority: 7
+    status: "approved"
+    notes: "Requires approval - instant loan service"
+  
+  - url: "https://www.cashloan-myanmar.com"
+    name: "Cash Loan Myanmar"
+    region: "myanmar"
+    description: "Cash advance service Myanmar"
+    tags:
+      - "payday-loan"
+      - "cash-advance"
+      - "myanmar"
+    priority: 6
+    status: "approved"
+    notes: "Requires approval - cash advance service"
+  
+  - url: "https://www.easyloan-mm.com"
+    name: "Easy Loan Myanmar"
+    region: "myanmar"
+    description: "Easy loan application Myanmar"
+    tags:
+      - "payday-loan"
+      - "online-lending"
+      - "myanmar"
+    priority: 6
+    status: "approved"
+    notes: "Requires approval - easy loan service"
+  
+  - url: "https://www.instantloan-myanmar.com"
+    name: "Instant Loan Myanmar"
+    region: "myanmar"
+    description: "Instant approval loan Myanmar"
+    tags:
+      - "payday-loan"
+      - "instant-loan"
+      - "myanmar"
+    priority: 7
+    status: "approved"
+    notes: "Requires approval - instant approval loan"
+
